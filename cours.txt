@@ -1,0 +1,32 @@
+              SPA / MDA 
+
+Pour une application suivant le design pattern MPA (Multi-Page Application) chaque clic de l'utilisateur déclenche une requête HTTP vers le serveur 
+Le résultat de cette nouvelle requête est un raffraichissement de la page complête, même si une partie du contenu reste
+inchangée.
+
+Pour Une application suivant le design pattern monopage ou SPA (Single Page Application) est une  implémentation d'application web qui ne charge 
+qu'un seul document web, puis met à jour le contenu du corps de ce document via des API Javascript telle que 
+XMLHttpRequest et Fetch lorsqu'un contenu différent doitêtre affiché.
+
+
+                MDA
+
+L'authentification d'un utilisateur via une SPA, l'approche de l'authentification nécessite que chaque appel vers l'appel identifie
+l'utilisateur. Pour cela, il ne sera pas demandé à l'utilisateur de saisir ses identifiants de connexion à chaque application
+A la place, chaque requête devra contenir token prouvant l'identité de l'utilisateur.
+
+                Le stockage des tokens
+
+Il est possible d'utiliser l'API Javascript localStorage. Cet objet permet de stocker dans le navigateur des informations sous forme de clé/valeur
+Pour cela il faut utilisé l'instruction :
+window.localStorage.setItem('key', '{value}')
+POur récuperer l'élément il suffit d'utiliser l'instruction suivant : 
+window.localStorage.getItem('key')
+Pour supprimer l'élément par sa cle il faut utilisé l'instruction suivante :
+window.localStorage.removeItem('key')
+
+
+                Mise en place de l'authentification d'un utilisateur.
+
+Nous créons un composant Login.js qui sera un formulaire permettant à l'utilisateur  de s'identifier
+EXEMPLE : Voir component Login.js
